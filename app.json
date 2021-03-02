@@ -1,7 +1,7 @@
 {
   "name": "blacky-rent-WEB",
   "description": "A simple-torrent service ported for heroku by blacky",
-  "logo": "https://github.com/iTzBlack007/blacky-rent-WEB/blob/main/logo.png",
+  "logo": "https://raw.githubusercontent.com/iTzBlack007/blacky-rent-WEB/main/logo.png",
   "repository": "https://github.com/iTzBlack007/blacky-rent-WEB",
   "website": "https://github.com/iTzBlack007/blacky-rent-WEB",
   "success_url": "https://t.me/iTz_Black007",

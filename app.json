@@ -1,0 +1,26 @@
+{
+  "name": "blacky-rent-WEB",
+  "description": "A simple-torrent service ported for heroku by blacky",
+  "logo": "https://github.com/iTzBlack007/blacky-rent-WEB/blob/main/logo.png",
+  "repository": "https://github.com/iTzBlack007/blacky-rent-WEB",
+  "website": "https://github.com/iTzBlack007/blacky-rent-WEB",
+  "success_url": "https://t.me/iTz_Black007",
+  "env": {
+    "TITLE": {
+      "description": "Application header.",
+      "value": "blacky-rent-WEB",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

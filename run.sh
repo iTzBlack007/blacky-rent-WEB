@@ -3,7 +3,7 @@
 get_latest_version() {
 	local uri
 	local version
-	uri="https://api.github.com/repos/boypt/simple-torrent/releases/latest"
+	uri="https://api.github.com/repos/jpillora/cloud-torrent/releases/latest"
 	version=$(
 		curl -s "$uri" |
 			grep -oP '"tag_name": "\K(.*)(?=")'
@@ -14,7 +14,7 @@ get_latest_version() {
 get_url() {
 	local version
 	version=$(get_latest_version)
-	echo "https://github.com/boypt/simple-torrent/releases/download/"$version"/cloud-torrent_linux_amd64.gz"
+	echo "https://github.com/jpillora/cloud-torrent/releases/download/"$version"/cloud-torrent_"${version#v}"_linux_amd64.gz"
 }
 
 get_host() {
@@ -29,7 +29,7 @@ chmod +x blacky-rent
 
 auto_pinger() {
 	host=$(get_host)
-	./blacky-rent &
+	./blacky-rent -p $PORT &
 	P1=$!
 	while :; do
 		sleep 1200
@@ -42,5 +42,5 @@ auto_pinger() {
 if "$PINGER"; then
 	auto_pinger
 else
-	./blacky-rent
+	./blacky-rent -p $PORT
 fi
